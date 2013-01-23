@@ -90,7 +90,7 @@ public class LDA {
 	public static void main(String[] args) throws IOException {
 		// Assuming training options for now
 		// String docFile ="posts";
-		String docFile = args[0];
+		String docFile = args[0]; // One document a line, white space separated words
 		LDA L = new LDA();
 		L.loadDataset(docFile);
 		int topics = Integer.parseInt(args[1]);
