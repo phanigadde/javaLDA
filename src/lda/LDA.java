@@ -89,16 +89,14 @@ public class LDA {
 	 */
 	public static void main(String[] args) throws IOException {
 		// Assuming training options for now
-		// String docFile =
-		// "/usr0/home/pgadde/Work/Ethnic/Hoodup/DataExploration/SampledPosts2/TopicChange/MyLDA/posts";
+		// String docFile ="posts";
 		String docFile = args[0];
 		LDA L = new LDA();
 		L.loadDataset(docFile);
 		int topics = Integer.parseInt(args[1]);
 		int iters = Integer.parseInt(args[2]);
 		L.initializeModel(topics, iters);
-		// String topWordsFile =
-		// "/usr0/home/pgadde/Work/Ethnic/Hoodup/DataExploration/SampledPosts2/TopicChange/MyLDA/topWords";
+		// String topWordsFile = "topWords";
 		String topWordsFile = args[3];
 		L.estimate(topWordsFile);
 	}
